@@ -1,0 +1,22 @@
+{
+  "name": "hwchallenges",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "allure3Macos": "npx allure awesome ./allure-results --single-file",
+    "test": "npx playwright test",
+    "testUI": "npx playwright test --ui",
+    "codegen": "npx playwright codegen"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "@types/node": "^22.15.29"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^9.8.0"
+  }
+}

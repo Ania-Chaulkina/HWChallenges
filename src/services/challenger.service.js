@@ -8,7 +8,10 @@ export class ChallengerService {
 	async post() {
 		return test.step('post /challenger', async () => {
 			const response = await this.request.post(`${URL}challenger`);
-			return response;
+			const headers = response.headers();
+            const token = headers['x-challenger'];
+            return token;
 		});
 	}
+	
 }

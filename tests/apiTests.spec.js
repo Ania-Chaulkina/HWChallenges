@@ -12,14 +12,6 @@ test.beforeAll(async ({ api }) =>{
 	console.log(token)
 });
 
-/*test.beforeAll(async ({ request }) => {
-		const api = new Api(request);
-		const response = await api.challenger.post();
-		
-		const headers = await response.headers();
-		token = headers['x-challenger'];
-		console.log(`${URL}/gui/challenges/${token}`);
-	});*/
 
 test.describe('Метод GET', () => {
 

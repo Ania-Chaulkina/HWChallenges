@@ -1,5 +1,5 @@
-import { ToDoBuilder } from "../builder/todo.builder";
-import { ChallengerService, ChallengesService, TodosService } from "./index";
+
+import { ChallengerService, ChallengesService, TodosService,Heartbeat } from "./index";
 
 export class ApiPage {
     constructor(request) {
@@ -7,5 +7,6 @@ export class ApiPage {
         this.challenger = new ChallengerService(request);
         this.todos = new TodosService(request);
         this.challenges = new ChallengesService(request);
+        this.heartbeat = new Heartbeat(request);
     }
 }

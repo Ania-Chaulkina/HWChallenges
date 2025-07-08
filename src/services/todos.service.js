@@ -54,9 +54,9 @@ export class TodosService {
         });
     };
 
-    async post(token, title ='', description ='', status = '') {
+    async post(token, title ='', description ='', status = '', id ='') {
         return test.step('Создаем задачу', async () => {
-            const response = await this.request.get(`${URL}todos`, {
+            const response = await this.request.post(`${URL}todos${id}`, {
                     headers: {
                         'x-challenger': token,
                     },
@@ -69,6 +69,7 @@ export class TodosService {
             return response;
         })
     }
+
 
     async put(token, id, title, description, status) {
         return test.step('Вносим изменения', async () => {
